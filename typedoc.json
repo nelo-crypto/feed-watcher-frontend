@@ -2,5 +2,5 @@
   "name": "Code Documentation",
   "entryPoint": ["src"],
   "tsconfig": "./tsconfig.json",
-  "out": "documentation/typedoc"
+  "out": "docs/typedoc"
 }
