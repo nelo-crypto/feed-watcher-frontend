@@ -6,9 +6,10 @@
     "dev": "next dev -p 3001",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
     "test": "jest",
-    "typedoc": "./node_modules/.bin/typedoc --exclude **/node_modules/** --ignoreCompilerErrors"
+    "typedoc": "./node_modules/.bin/typedoc --exclude **/node_modules/** --ignoreCompilerErrors",
+    "lint": "eslint . --ext .ts --ext .tsx",
+    "lint-and-fix": "eslint . --ext .ts --ext .tsx --fix"
   },
   "dependencies": {
     "@nestjs/typeorm": "^8.1.2",
