@@ -51,8 +51,6 @@ export default function List() {
         )
             .then((res) => res.json())
             .then((res: any[]) => {
-                console.log('Response', res.data.objects)
-
                 setObjectsResponse(res.data.objects)
                 setLoading(false)
             })
