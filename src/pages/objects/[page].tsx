@@ -129,9 +129,10 @@ export default function List() {
                                         <td>{record.id}</td>
                                         <td>{record.title}</td>
                                         <td>{record.rank}</td>
-                                        <td>{record.images.map((image: ObjectImage) => {
+                                        <td>{record.images.map((image: ObjectImage, imageIndex: number) => {
                                             return (
                                                 <img src={image.baseimageurl}
+                                                     key={imageIndex}
                                                      width={100}
                                                      alt={image.alttext}/>
                                             )
