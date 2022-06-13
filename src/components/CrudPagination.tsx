@@ -28,7 +28,7 @@ export default function CrudPagination({
         if (!tail && ((pageNumber < (currentPage - 3)) || ((currentPage + 3) < pageNumber))) {
             if (!ellipsis) {
                 ellipsis = true
-                paginationItems.push(<Pagination.Ellipsis/>)
+                paginationItems.push(<Pagination.Ellipsis key={pageNumber}/>)
             }
 
             continue
