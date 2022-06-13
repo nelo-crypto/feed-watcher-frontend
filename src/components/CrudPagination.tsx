@@ -16,11 +16,25 @@ export default function CrudPagination({
                                            currentPage,
                                        }: CrudPaginationProps) {
     const numberOfPages = Math.ceil(numberOfItems / numberOfItemsPerPage)
-    const paginationItems = []
+    const paginationItems: any[] = []
     const router = useRouter()
+
+    let ellipsis = false
 
     for (let pageNumber = 1; pageNumber <= numberOfPages; pageNumber++) {
         const route = sprintf(baseRoute, pageNumber)
+        const tail = (pageNumber === 1 || pageNumber === numberOfPages)
+
+        if (!tail && ((pageNumber < (currentPage - 3)) || ((currentPage + 3) < pageNumber))) {
+            if (!ellipsis) {
+                ellipsis = true
+                paginationItems.push(<Pagination.Ellipsis/>)
+            }
+
+            continue
+        }
+
+        ellipsis = false
 
         paginationItems.push(
             <Pagination.Item key={pageNumber}
