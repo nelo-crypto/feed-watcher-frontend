@@ -6,6 +6,7 @@
     "dev": "next dev -p 3001",
     "build": "next build",
     "start": "next start",
+    "export": "next export",
     "test": "jest",
     "typedoc": "./node_modules/.bin/typedoc --exclude **/node_modules/** --ignoreCompilerErrors",
     "lint": "eslint . --ext .ts --ext .tsx",
