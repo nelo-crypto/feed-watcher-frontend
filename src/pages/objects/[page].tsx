@@ -37,7 +37,7 @@ export default function List() {
     const [objectsResponse, setObjectsResponse] = useState<ObjectsResponse | null>(null)
     const [error, setError] = useState<string | null>(null)
     const [isLoading, setLoading] = useState<boolean>(false)
-    const page: number = parseInt(router.query.page)
+    const page: number = parseInt(router.query.page[0])
 
     useEffect(() => {
         if (!router.isReady) return
