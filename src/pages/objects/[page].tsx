@@ -42,7 +42,7 @@ export default function List() {
         if (!router.isReady) return
         if (router.query.page === undefined) return
 
-        const page: number = parseInt(router.query.page[0])
+        const page: number = parseInt(router.query.page)
 
         setLoading(true)
         fetch(API.GRAPHQL_ENDPOINT, {
