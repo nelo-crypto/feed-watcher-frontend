@@ -37,10 +37,13 @@ export default function List() {
     const [objectsResponse, setObjectsResponse] = useState<ObjectsResponse | null>(null)
     const [error, setError] = useState<string | null>(null)
     const [isLoading, setLoading] = useState<boolean>(false)
-    const page: number = parseInt(router.query.page[0])
+    console.log('router.query', router.query)
 
     useEffect(() => {
         if (!router.isReady) return
+        if (router.query.page === undefined) return
+
+        const page: number = parseInt(router.query.page[0])
 
         setLoading(true)
         fetch(API.GRAPHQL_ENDPOINT, {
