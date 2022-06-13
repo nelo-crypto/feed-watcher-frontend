@@ -53,7 +53,7 @@ export default function List() {
             }
         )
             .then((res) => res.json())
-            .then((res: any[]) => {
+            .then((res: { data }) => {
                 setObjectsResponse(res.data.objects)
                 setLoading(false)
             })
