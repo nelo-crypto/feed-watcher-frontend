@@ -37,7 +37,6 @@ export default function List() {
     const [objectsResponse, setObjectsResponse] = useState<ObjectsResponse | null>(null)
     const [error, setError] = useState<string | null>(null)
     const [isLoading, setLoading] = useState<boolean>(false)
-    console.log('router.query', router.query)
 
     useEffect(() => {
         if (!router.isReady) return
