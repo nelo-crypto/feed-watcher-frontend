@@ -16,7 +16,7 @@ export default function CrudPagination({
                                            currentPage,
                                        }: CrudPaginationProps) {
     const numberOfPages = Math.ceil(numberOfItems / numberOfItemsPerPage)
-    const paginationItems: any[] = []
+    const paginationItems: []
     const router = useRouter()
 
     let ellipsis = false
