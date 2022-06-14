@@ -15,3 +15,9 @@
 yarn install
 yarn run dev
 ```
+
+### Running tests
+
+```
+yarn test
+```
