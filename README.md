@@ -46,11 +46,11 @@ The Frontend client is implemented with React, NextJS and React Bootstrap. This 
   future.
 * Find a way to make backend GraphQL endpoint responses and frontend TypeScript Types interchangeable and reusable
   without code duplication.
-* Add better page number validation/feedback.
+* Add better page number validation/feedback (example: `https://feed-watcher-frontend.vercel.app/objects/fghfgh`).
 
 ### Vercel
 
-This app is live at Vercel (`https://feed-watcher-frontend.vercel.app/objects/9`)
+This app is live at Vercel (`https://feed-watcher-frontend.vercel.app`)
 
 ### Running tests
 
