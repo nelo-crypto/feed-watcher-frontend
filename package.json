@@ -36,6 +36,7 @@
     "typeorm": "^0.3.6"
   },
   "devDependencies": {
+    "next-router-mock": "^0.7.4",
     "@ts-docs/default-docs-structure": "^0.4.4",
     "@ts-docs/ts-docs": "^0.4.4",
     "@types/node": "17.0.41",
