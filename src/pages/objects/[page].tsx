@@ -16,6 +16,8 @@ const OBJECT_QUERY = `
       id
       title
       rank
+      culture
+      verificationleveldescription
       images {
         baseimageurl
         alttext
@@ -120,9 +122,9 @@ export default function List() {
                         <thead>
                         <tr>
                             <th scope="col">#ID</th>
-                            <th scope="col">Title</th>
+                            <th scope="col">Print information</th>
                             <th scope="col">Rank</th>
-                            <th scope="col">Image(s)</th>
+                            <th scope="col">Images (first one/two)</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -130,9 +132,15 @@ export default function List() {
                                 return (
                                     <tr key={recordIndex}>
                                         <td>{record.id}</td>
-                                        <td>{record.title}</td>
+                                        <td>
+                                            <p><b>Title:</b> {record.title ? record.title : 'N/A'}</p>
+                                            <p><b>Culture:</b> {record.culture ? record.culture : 'N/A'}</p>
+                                            <p><b>Verification
+                                                description:</b> {record.verificationleveldescription ? record.verificationleveldescription : 'N/A'}
+                                            </p>
+                                        </td>
                                         <td>{record.rank}</td>
-                                        <td>{record.images.map((image: ObjectImage, imageIndex: number) => {
+                                        <td>{record.images.filter((image, idx) => idx < 3).map((image: ObjectImage, imageIndex: number) => {
                                             return (
                                                 <img src={image.baseimageurl}
                                                      key={imageIndex}
