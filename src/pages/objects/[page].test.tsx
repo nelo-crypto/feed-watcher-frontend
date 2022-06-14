@@ -4,6 +4,7 @@ import List from './[page]'
 import ObjectRecord from './../../interfaces/Objects/Record'
 import {getByText, render, screen} from '@testing-library/react'
 import mockRouter from 'next-router-mock'
+import {jest} from '@jest/globals'
 
 jest.mock('next/router', () => require('next-router-mock'))
 
