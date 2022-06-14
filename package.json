@@ -6,7 +6,7 @@
     "dev": "next dev -p 3001",
     "build": "next build",
     "postinstall": "next build",
-    "start": "next start -p 3001",
+    "start": "next start -p $PORT",
     "export": "next export -o docs",
     "test": "jest",
     "typedoc": "./node_modules/.bin/typedoc --exclude **/node_modules/** --ignoreCompilerErrors",
