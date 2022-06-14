@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev -p 3001",
     "build": "next build",
-    "postinstall": "next build",
+    "postinstall": "yarn run build",
+    "heroku-postbuild": "yarn run build",
     "start": "next start -p $PORT",
     "export": "next export -o docs",
     "test": "jest",
