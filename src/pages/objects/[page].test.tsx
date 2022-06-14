@@ -2,7 +2,7 @@ import React from 'react'
 
 import List from './[page]'
 import ObjectRecord from './../../interfaces/Objects/Record'
-import {getByText, render, screen} from '@testing-library/react'
+import {render, screen} from '@testing-library/react'
 import mockRouter from 'next-router-mock'
 import {jest} from '@jest/globals'
 
