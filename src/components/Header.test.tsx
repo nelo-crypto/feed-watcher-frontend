@@ -2,7 +2,7 @@ import {render, screen} from '@testing-library/react'
 import '@testing-library/jest-dom'
 import Header from './Header'
 
-describe('Pagination', () => {
+describe('Header', () => {
     test('Have title element with correct value', () => {
         render(<Header pageTitle={'Title example'}/>)
 
